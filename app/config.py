@@ -60,7 +60,7 @@ class Config:
         return {
             "model_name": model_map.get(model_type, cls.GEMINI_MODEL_GENERAL),
             "temperature": 0.3 if model_type != "math" else 0.1,
-            "max_output_tokens": 2048,
+            "max_output_tokens": 1000,
         }
 
 
