@@ -270,11 +270,11 @@ If rules are ambiguous (confidence < 0.7), the system uses Gemini for classifica
 
 | Category | Model | Temperature | Use Case |
 |----------|-------|-------------|----------|
-| Math | gemini-1.5-flash | 0.1 | Calculations, equations |
-| Coding | gemini-1.5-flash | 0.7 | Programming, algorithms |
-| Writing | gemini-1.5-flash | 0.7 | Creative content |
-| Document | gemini-1.5-flash (RAG) | 0.7 | PDF Q&A |
-| General | gemini-1.5-flash | 0.7 | Conversation |
+| Math | gemini-2.5-flash | 0.1 | Calculations, equations |
+| Coding | gemini-2.5-flash | 0.3 | Programming, algorithms |
+| Writing | gemini-2.5-flash | 0.3 | Creative content |
+| Document | gemini-2.5-flash (RAG) | 0.3 | PDF Q&A |
+| General | gemini-2.5-flash | 0.3 | Conversation |
 
 ## 🔧 Configuration
 
@@ -282,10 +282,10 @@ Edit [app/config.py](app/config.py) to customize:
 
 ```python
 # Model selection (Free tier - all Flash models)
-GEMINI_MODEL_GENERAL = "gemini-1.5-flash"
-GEMINI_MODEL_CODE = "gemini-1.5-flash"
-GEMINI_MODEL_MATH = "gemini-1.5-flash"
-GEMINI_MODEL_DOCUMENT = "gemini-1.5-flash"
+GEMINI_MODEL_GENERAL = "gemini-2.5-flash"
+GEMINI_MODEL_CODE = "gemini-2.5-flash"
+GEMINI_MODEL_MATH = "gemini-2.5-flash"
+GEMINI_MODEL_DOCUMENT = "gemini-2.5-flash"
 
 # RAG settings
 CHUNK_SIZE = 1000
@@ -331,7 +331,7 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 ## 🛠️ Development
 
-### efine detection rules in [router.py](app/router.py)
+1. Define detection rules in [router.py](app/router.py)
 2. Add model configuration in [config.py](app/config.py)
 3. Update routing logic in [router.py](app/router.py)
 4. Handle in [main.py](app/main.py) `/chat` endpoint
