@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Data and logs
+*.log
+data/
+vectorstore/
+uploads/
+
+# Documentation
+README.md
+SETUP_GUIDE.md
+*.md
+
+# Tests
+tests/
+test_*.py
+*_test.py
+
+# Environment
+.env.example

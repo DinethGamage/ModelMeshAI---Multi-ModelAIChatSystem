@@ -18,6 +18,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY app/ ./app/
 
+# Copy .env file if it exists (optional - use environment variables in production)
+COPY .env* ./
+
 # Create necessary directories
 RUN mkdir -p data vectorstore
 
